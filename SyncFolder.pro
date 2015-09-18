@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -14,10 +14,18 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwidget.cpp \
-    choicerolewidget.cpp
+    choicerolewidget.cpp \
+    serverwidget.cpp \
+    inputdatawidget.cpp \
+    syncserver.cpp
 
 HEADERS  += mainwidget.h \
-    choicerolewidget.h
+    choicerolewidget.h \
+    serverwidget.h \
+    inputdatawidget.h \
+    syncserver.h
 
 FORMS    += mainwidget.ui \
-    choicerolewidget.ui
+    choicerolewidget.ui \
+    serverwidget.ui \
+    inputdatawidget.ui

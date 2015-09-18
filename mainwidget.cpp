@@ -31,9 +31,10 @@ void MainWidget::on_browseButton_clicked() {
 }
 
 void MainWidget::on_continueButton_clicked() {
-    if (!ui->pathFolderEdit->text().isEmpty()) {
-        this->hide();
-        ChoiceRoleWidget* rw = new ChoiceRoleWidget();
-        rw->show();
-    }
+    if (ui->pathFolderEdit->text().isEmpty())
+        return;
+    this->hide();
+    ChoiceRoleWidget* rw = new ChoiceRoleWidget();
+    rw->show();
+    connect(rw, SIGNAL(destroyed()), this, SLOT(close()));
 }
