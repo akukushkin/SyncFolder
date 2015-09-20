@@ -12,9 +12,17 @@ class ServerWidget : public QWidget
 {
     Q_OBJECT
 
+private:
+    void fillWidget() const;
+
 public:
     explicit ServerWidget(int port, QWidget *parent = 0);
     ~ServerWidget();
+
+private slots:
+    void on_startButton_clicked();
+
+    void on_stopButton_clicked();
 
 private:
     Ui::ServerWidget *ui;

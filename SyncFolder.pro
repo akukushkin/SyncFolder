@@ -17,15 +17,20 @@ SOURCES += main.cpp\
     choicerolewidget.cpp \
     serverwidget.cpp \
     inputdatawidget.cpp \
-    syncserver.cpp
+    syncserver.cpp \
+    socketrunnable.cpp
 
 HEADERS  += mainwidget.h \
     choicerolewidget.h \
     serverwidget.h \
     inputdatawidget.h \
-    syncserver.h
+    syncserver.h \
+    socketrunnable.h
 
 FORMS    += mainwidget.ui \
     choicerolewidget.ui \
     serverwidget.ui \
     inputdatawidget.ui
+
+OTHER_FILES += \
+    rest_api.txt

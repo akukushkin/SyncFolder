@@ -15,32 +15,45 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
+    <layout class="QFormLayout" name="formLayout">
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Your IP Adresses</string>
        </property>
       </widget>
      </item>
-     <item>
+     <item row="0" column="1">
       <widget class="QTextBrowser" name="addrTextBrowser"/>
      </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="label_2">
+     <item row="1" column="1">
+      <widget class="QLabel" name="portLabel">
        <property name="text">
-        <string>Number of connection:</string>
+        <string/>
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QLabel" name="label_3">
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Number of connection</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="numConnectionLabel">
        <property name="text">
         <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Your port</string>
        </property>
       </widget>
      </item>
@@ -49,21 +62,21 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="backButton">
        <property name="text">
         <string>Back</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="stopButton">
        <property name="text">
         <string>Stop</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="startButton">
        <property name="text">
         <string>Start</string>
        </property>
@@ -73,6 +86,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>backButton</tabstop>
+  <tabstop>stopButton</tabstop>
+  <tabstop>addrTextBrowser</tabstop>
+  <tabstop>startButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

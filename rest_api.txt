@@ -1,0 +1,18 @@
+1) Request
+2) Response
+
+1. Ready to sync
+1) GET /ready
+2) 200 OK
+   500 ERROR
+
+2. List of file
+1) GET /listfile
+2) 200 OK
+   JSON: ["foo.txt", "boo.jpeg", ...]
+   500 ERROR
+
+3. Get file
+1) GET /getfile/namefile
+2) 200 OK
+   500 ERROR
